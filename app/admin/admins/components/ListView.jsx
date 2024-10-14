@@ -33,7 +33,6 @@ const ListView = () => {
                         <th className="font-semibold border-t bg-gray-100 text-gray-500 px-3 py-3 border-l  rounded-tl-lg">ID</th>
                         <th className="font-semibold border-t bg-gray-100 text-gray-500 px-3 py-3">Imagen</th>
                         <th className="font-semibold border-t bg-gray-100 text-gray-500 px-3 py-3 text-left">Nombre</th>
-                        <th className="font-semibold border-t bg-gray-100 text-gray-500 px-3 py-3 text-left">Email</th>
                         <th className="font-semibold border-t bg-gray-100 text-gray-500 px-3 py-3 border-r flex text-center rounded-tr-lg">
                             Acciones
                         </th>
@@ -80,8 +79,10 @@ function Row({ item, index, totalItems }) {
                     <img src={item?.imageUrl} alt="Categoria" className="w-10 h-10 object-cover rounded-lg" />
                 </div>
             </td>
-            <td className={`border-t bg-white px-3 py-2 ${index === totalItems - 1 ? 'border-b' : ''}`}>{item?.name}</td>
-            <td className={`border-t bg-white text-gray-500 text-sm px-3 py-2 ${index === totalItems - 1 ? 'border-b' : ''}`}> {item?.email}</td>
+            <div className="flex flex-col">
+                <td className={`border-t bg-white px-3 pt-1`}>{item?.name}</td>
+                <h3 className={`  px-3  text-sm text-gray-600 pb-2 ${index === totalItems - 1 ? 'border-b' : ''}`}>{item?.email}</h3>
+            </div>
             <td className={` border-t bg-w  hite px-3 py-2  border-r  ${index === totalItems - 1 ? 'rounded-br-lg border-b' : ''}`}>
                 <div className=" flex gap-2 items-center">
                     <Button
