@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { Book, Layers2, LayoutDashboard, LibraryBig, LogOut, Package, ShoppingCart, Star, User } from "lucide-react"
+import { Book, Layers2, LayoutDashboard, LibraryBig, LogOut, Package, ShieldCheck, ShoppingCart, Star, User } from "lucide-react"
 import toast from "react-hot-toast"
 import { signOut } from "firebase/auth"
 import { auth } from "@/lib/firebase"
@@ -49,6 +49,11 @@ const Sidebar = () => {
             link: "/admin/collections",
             icon: <LibraryBig className="h-5 w-5" />
         },
+        {
+            name: "Administradores",
+            link: "/admin/admins",
+            icon: <ShieldCheck className="h-5 w-5" />
+        }
     ]
 
     return (
