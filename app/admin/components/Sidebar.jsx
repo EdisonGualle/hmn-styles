@@ -57,7 +57,7 @@ const Sidebar = () => {
     ]
 
     return (
-        <section className="flex flex-col gap-10  bg-white border-r px-4 py-3 h-screen overflow-hidden w-[260px] z-50">
+        <section className="sticky top-' flex flex-col gap-10  bg-white border-r px-4 py-3 h-screen overflow-hidden w-[260px] z-50">
             <div className="flex justify-center pt-4">
                 <img className="h-8" src="/logo.png" alt="logo" />
             </div>

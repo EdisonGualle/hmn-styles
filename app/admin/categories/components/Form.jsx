@@ -147,7 +147,6 @@ const Form = () => {
                         id="category-slug"
                         name="category-slug"
                         type="text"
-                        
                         placeholder="Ingrese el slug"
                         value={data?.slug ?? ""}
                         onChange={(e) => handleData("slug", e.target.value)}

@@ -1,9 +1,12 @@
+import { Button } from "@nextui-org/react"
+import Link from "next/link"
+import ListView from "./components/ListWiew"
 
 const Page = () => {
   return (
-    <div className="p-5">
-      Products  
-    </div>
+    <main className="p-5">
+      <ListView />
+    </main>
   )
 }
 
